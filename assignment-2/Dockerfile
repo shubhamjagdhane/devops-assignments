@@ -1,10 +1,10 @@
 FROM mysql
 
 ENV MYSQL_ROOT_PASSWORD=root 
-ENV MYSQL_DATABASE=devops-assignment-1 
-ENV MYSQL_USER=shubham 
-ENV MYSQL_PASSWORD=jagdhane
+ENV MYSQL_DATABASE=pucsdStudents
+ENV MYSQL_USER=pucsd 
+ENV MYSQL_PASSWORD=pucsd
 
-ADD students.sql /docker-entrypoint-initdb.d
+ADD test.sql /docker-entrypoint-initdb.d
 
 EXPOSE 3306
