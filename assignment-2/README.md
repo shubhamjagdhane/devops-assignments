@@ -26,9 +26,14 @@ I have used mysql image to build my customize image and to start the container.
 ![](./images/clean.png)
 
 
-Note:
+Note
 ```
 The MySQL container's port 3306 is mapped with the host machine's port 3306
+```
+
+### Other way to start the container
+```
+docker run -itd --name devops-assignment-2 -p 3306:3306 shubham1010/devops-assignment-2
 ```
 
 ### Prerequisite
@@ -43,6 +48,9 @@ Make (not mandatory)
 To install docker on you machine [click here](https://docs.docker.com/get-docker/)
 
 2) [Make](https://www.gnu.org/software/make/)&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; GNU make utility to maintain groups of programs
+
+
+
 
 ## Built with Stack
 
