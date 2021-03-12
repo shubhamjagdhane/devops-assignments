@@ -1,7 +1,7 @@
 build:
 	docker build -t simple-mysql-test .
 	
-run: build
+run: 
 	docker run -itd --name simple-mysql-example -p 3306:3306 simple-mysql-test
 
 exec:
