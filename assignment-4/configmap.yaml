@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: go-web-config
+  namespace: default
+data:
+  IP_ADDRESS: 127.0.0.1
+  HOSTNAME: pucsd
+  CITY: Pune
+  REGION: PCMC
+  COUNTRY: India
