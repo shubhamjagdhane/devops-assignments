@@ -1,23 +1,34 @@
-# Simple-Go-Web-Application built to deploy using Kubernetes Artifacts
+# Assignmet-4
+Simple-Go-Web-Application deploy using Kubernetes Artifacts
 
-We can either use the public image or local image in the deployment.yaml file.
+## Prerequisites
+```
+Docker
+Minikube
+Kubectl
+```
 
-As in this section we are using local image and if the pod fails with the ErrImagePull status, please execute the below commands:
+## Installation
 
-1) minikube docker-env
-o/p => 
-export DOCKER_TLS_VERIFY=”1"
-export DOCKER_HOST=”tcp://172.17.0.2:2376"
-export DOCKER_CERT_PATH=”/home/user/.minikube/certs”
-export MINIKUBE_ACTIVE_DOCKERD=”minikube”# To point your shell to minikube’s docker-daemon, run:
-# eval $(minikube -p minikube docker-env)
+1. [Docker](https://www.docker.com/) &nbsp; &nbsp; : If you don't have docker install, please install it from [Here](https://docs.docker.com/engine/install/).
+2. [Minikube]() : You can install Minikube on docker as well on virtual machine[Here](https://v1-18.docs.kubernetes.io/docs/tasks/tools/install-minikube/) is link to install Minikube using virtual machine.
+3. [Kubectl]() &nbsp; &nbsp;: You can install Kubectl from [Here](https://kubernetes.io/docs/tasks/tools/).
 
-2) eval $(minikube -p minikube docker-env)
 
-3) docker build . -t test
 
-4) And recreate the jobs once again by using `kubectl apply -f .`
-You shall see the pods are running.
+## Getting Started
 
-All this procedures are well tested on from my side.
-If you still got some error please contact to `shubhamjagdhane1010@gmail.com`
+1. Clone the project.
+2. Go to assiggment-4/ repository
+3. docker build . -t test
+4. Start the minikube by executing `minikube start` command
+5. Execute `kubectl apply -f .`
+6. Grab the IP address of the Minikube by executing `kubectl cluster-info` command.
+7. Enter `kubectl get svc` command to get the port of the service.
+8. Open browser and enter `http://minikube-ip:port/pucsd`, replace minikube-ip and port from the output of the 6th and 7th command respectively.
+
+## Built With Stack
+
+* [Docker](https://www.docker.com/) &nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;Used to build the custom images
+* [Minikube](https://v1-18.docs.kubernetes.io/docs/tasks/tools/install-minikube/) - &nbsp;Used start the cluster for kubernetes
+* [Kubectl](https://kubernetes.io/docs/tasks/tools/) &nbsp;&nbsp;&nbsp;- &nbsp;Used to execute `.yaml` files

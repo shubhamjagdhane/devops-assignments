@@ -16,8 +16,8 @@ spec:
       containers:
       - name: application
         image: test:latest
-        # imagePullPolicy: IfNotPresent
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
+        #imagePullPolicy: Never
         envFrom:
         - configMapRef:
             name: go-web-config
